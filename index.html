@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="DGCC Result Vision">
+<meta property="og:description" content="দিনাজপুর সরকারি সিটি কলেজ এর পরীক্ষার ফলাফল এবং নিজের অবস্থান দেখতে পারবেন।">
+    <meta property="og:image" content="Dgcc.jpg">
+<link rel="icon" href="Mehedi.jpg"/>
 <title>DGCC Result Vision</title>
-    <meta property="og:title" content="DGCC Result Vision">
-    <meta property="og:description" content="দিনাজপুর সরকারি সিটি কলেজ এর পরীক্ষার ফলাফল এবং নিজের অবস্থান দেখতে পারবেন।">
-    <meta property="og:image" content="dgcc.jpg">
 <style>
 /* CSS Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
@@ -23,21 +24,66 @@ body {
   padding: 20px;
   border: 2px solid #888;
   border-radius: 10px;
-  background-color: #dffdff;
+  background-color: #eeeeee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
   text-align: center;
   color: brown;
   font-weight: bold;
+  animation: slideInDown 1s ease-in-out;
 }
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 h2 {
   text-align: center;
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .form-group {
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-group label {
@@ -53,14 +99,25 @@ h2 {
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .result {
   margin-top: 10px;
   padding: 20px;
   border-radius: 5px;
-  background-color: #dffdff;
+  background-color: #eeeeee;
   color:white;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .result p {
@@ -120,18 +177,24 @@ h2 {
   cursor: pointer;
   transition: background-color 0.3s;
   font-family: Arial;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .my-result-btn:hover {
   background-color: #0056b3;
 }
+
 h5{
   text-align: center;
+  animation: fadeInUp 1s ease-in-out;
 }
+
 marquee{
   background-color: yellow;
   padding: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
+
 .fd{
   border: none;
   border-radius: 15px;
@@ -140,15 +203,25 @@ marquee{
   background-color:#00ff00;
   padding: 5px;
   font-family: "Lucida Console", Courier, monospace;
+  animation: fadeInUp 1s ease-in-out;
 }
+
 h4{
   font-family: "Lucida Console", Courier, monospace;
   font-weight: bold;
 }
+
 h2 a{
   font-family: "Source Sans Pro", "Arial", sans-serif;
   color: blue;
 }
+#quote {
+        font-size: 15px;
+        font-family: Monospace;
+        color: #2c345c;
+        font-style: italic;
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
@@ -173,8 +246,10 @@ h2 a{
 
 <div class="container">
   <h1>Dinajpur Govt City College </h1>
-  <h2> <a href="Exam Type.html"><pre>☞ View All Subject Result</pre></a> </h2>
+  <h2 title="সকল বিষয় এর মার্ক দেখুন "> <a href="Exam Type.html"><pre>☞ View All Subject Result</pre></a> </h2>
   <marquee> নতুন ফিচার ✪ কয়টি বিষয়ে অকৃতকার্য হয়েছেন।  সেটি জানতে পারবেন ✪ আরো কোনো ফিচার উপভোগ করতে চাইলে ফিডব্যাক দিন। ◑ Thank You </marquee>
+  <br> <br>
+  <div id="quote"></div>
     <h4 align="right" style="color:#800080">Give us your ☞ <a href="feedback.html"><button class="fd">Feedback</button></a></h4>
   <div class="form-group">
     <label for="department">Select Department:</label>
@@ -209,22 +284,44 @@ h2 a{
   <h5 style="color:brown"><pre>© Developed by <a style="color:#27272c" href="https://www.facebook.com/mdmehedialhasansawon?mibextid=ZbWKwL">Mehedi Al Hasan Sawon</pre> </a></h5>
 </div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="modalText"></p>
-  </div>
-</div>
-
 <script>
+const quotes = [
+    "There is nothing impossible to they who will try — Alexander the Great",
+    "Success is not final, failure is not fatal: it is the courage to continue that counts - Winston Churchill",
+    "Stay hungry, stay foolish. - Steve Jobs",
+    "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "You define your own life. Don't let other people write your script— Oprah Winfrey",
+    "Spread love everywhere you go. — Mother Teresa",
+    "You can be everything. You can be the infinite amount of things that people are. — Kesha",
+    "No matter what people tell you, words and ideas can change the world. — Robin Williams"
+];
+
+function typeWriter(text, i, fnCallback) {
+    if (i < text.length) {
+        document.getElementById("quote").innerHTML = text.substring(0, i+1);
+        setTimeout(function() {
+            typeWriter(text, i + 1, fnCallback)
+        }, 100);
+    } else if (typeof fnCallback == 'function') {
+        setTimeout(fnCallback, 1000);
+    }
+}
+
+function displayQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
+    typeWriter(randomQuote, 0, function() {
+        // Typing animation complete, do something here if needed
+    });
+}
+
+// Display initial quote
+displayQuote();
 // JavaScript code
 var students = {
   "1": { department: "Science", 
          exams: {
-       // "Test - 2024": { marks: 585, totalMarks: 900, position: 1 },
-     //    "Pre-Test - 2024": { marks: 798, totalMarks: 900, position: 1 },
            "Tutorial - 2024": { marks: 79, totalMarks: 140, position: 2,
          failedSubject:1 }
          }
@@ -3298,52 +3395,35 @@ function showResult() {
       document.getElementById("rollResult").textContent = "Roll Number: " + roll;
       document.getElementById("examTypeResult").textContent = "Exam Type: " + selectedExamType;
 
-var resultText = "";
+      var resultText = "";
 
-// Check if there's a failed subject
-if (exam.failedSubject) {
-  // Customize the message or handle it differently
-  resultText += "Failed Subject: " + exam.failedSubject + "\n\n";
-} else {
-  // Congratulations message when there's no failed subject
-  resultText += "Congratulations! You passed all subjects.\n\n";
-}
+      // Check if there's a failed subject
+      if (exam.failedSubject) {
+        // Customize the message or handle it differently
+        resultText += "Failed Subject: " + exam.failedSubject + "\n\n";
+      } else {
+        // Congratulations message when there's no failed subject
+        resultText += "Congratulations! You passed all subjects.\n\n";
+      }
 
-// Marks section
-resultText += "Marks: " + exam.marks + "/" + exam.totalMarks + "\n\n";
-resultText += "Percentage: " + exam.percentage + "\n\n";
-resultText += "Position: " + exam.position + "\n";
-
-
+      // Marks section
+      resultText += "Marks: " + exam.marks + "/" + exam.totalMarks + "\n\n";
+      resultText += "Percentage: " + exam.percentage + "\n\n";
+      resultText += "Position: " + exam.position + "\n";
 
       document.getElementById("resultText").textContent = resultText;
-
-      // Color result text box
       document.getElementById("result").style.backgroundColor = "#007A51"; // Green background color
     } else {
       document.getElementById("resultText").textContent = "No result found for selected exam type.";
       document.getElementById("result").style.backgroundColor = "red"; // Reset background color
     }
   } else {
-    var modalText = "Roll Number Not Found ☹️";
-    document.getElementById("modalText").textContent = modalText;
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    // Reset result text box
+    // Display message in result section
+    document.getElementById("resultText").textContent = "Not Found ☹️";
     document.getElementById("departmentResult").textContent = "";
     document.getElementById("rollResult").textContent = "";
     document.getElementById("examTypeResult").textContent = "";
-    document.getElementById("resultText").textContent = "";
-    document.getElementById("result").style.backgroundColor = " transparent"; // Reset background color
+    document.getElementById("result").style.backgroundColor = "purple "; // Reset background color
   }
 }
 </script>
