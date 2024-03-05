@@ -7,10 +7,14 @@
 <meta property="og:description" content="দিনাজপুর সরকারি সিটি কলেজ এর পরীক্ষার ফলাফল এবং নিজের অবস্থান দেখতে পারবেন।">
     <meta property="og:image" content="Dgcc.jpg">
 <link rel="icon" href="Dgcc.jpg"/>
+<link href="https://fonts.maateen.me/apona-lohit/font.css" rel="stylesheet">
+
 <title>DGCC Result Vision</title>
 <style>
 /* CSS Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.maateen.me/apona-lohit/font.css');
+
 body {
  font-family: 'Poppins', sans-serif;
   background-color: #f2f2f2;
@@ -191,8 +195,13 @@ h5{
 
 marquee{
   background-color: yellow;
-  padding: 10px;
-  animation: fadeIn 1s ease-in-out;
+  padding: 2px;
+  font-size: 13px;
+  animation: fadeIn 7s ease-in-out;
+  font-family: 'AponaLohit', sans-serif;
+  font-weight: bold;
+  
+  
 }
 
 .fd{
@@ -203,7 +212,7 @@ marquee{
   background-color:#00ff00;
   padding: 5px;
   font-family: "Lucida Console", Courier, monospace;
-  animation: fadeInUp 1s ease-in-out;
+  animation: fadeInUp 10s ease-in-out;
 }
 
 h4{
@@ -216,8 +225,9 @@ h2 a{
   color: blue;
 }
 #quote {
-        font-size: 15px;
-        font-family: Monospace;
+        font-size: 18px;
+        font-family: 'AponaLohit', sans-serif;
+
         color: #2c345c;
         font-style: italic;
         font-weight: bold;
@@ -247,7 +257,7 @@ h2 a{
 <div class="container">
   <h1>Dinajpur Govt City College </h1>
   <h2 title="সকল বিষয় এর মার্ক দেখুন "> <a href="Exam Type.html"><pre>☞ View All Subject Result</pre></a> </h2>
-  <marquee> নতুন ফিচার ✪ কয়টি বিষয়ে অকৃতকার্য হয়েছেন।  সেটি জানতে পারবেন ✪ আরো কোনো ফিচার উপভোগ করতে চাইলে ফিডব্যাক দিন। ◑ Thank You </marquee>
+  <marquee> ৫ই মার্চ ২০২৪ ইং তারিখে সর্বশেষ আপডেট করা হয়েছে। ✔ নতুন ফিচার ✪ কয়টি বিষয়ে অকৃতকার্য হয়েছেন।  সেটি জানতে পারবেন ✪  এবং প্রতিবার রিফ্রেস করাতে নতুন নতুন জ্ঞানমূলক প্রশ্ন প্রদর্শন করবে। ✪ আরো কোনো ফিচার উপভোগ করতে চাইলে ফিডব্যাক দিন। ◑ Thank You </marquee>
   <br> <br>
   <div id="quote"></div>
     <h4 align="right" style="color:#800080">Give us your ☞ <a href="feedback.html"><button class="fd">Feedback</button></a></h4>
@@ -286,15 +296,44 @@ h2 a{
 
 <script>
 const quotes = [
-    "There is nothing impossible to they who will try — Alexander the Great",
-    "Success is not final, failure is not fatal: it is the courage to continue that counts - Winston Churchill",
-    "Stay hungry, stay foolish. - Steve Jobs",
-    "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
-    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
-    "You define your own life. Don't let other people write your script— Oprah Winfrey",
-    "Spread love everywhere you go. — Mother Teresa",
-    "You can be everything. You can be the infinite amount of things that people are. — Kesha",
-    "No matter what people tell you, words and ideas can change the world. — Robin Williams"
+    "ট্রেনে কল্যাণীর সাথে দেখাকালীন অনুপমের বয়স-২৪/২৫ বছর।",
+    "ট্রেনে অনুপমের সাথে দেখাকালীন কল্যাণীর বয়স-১৬/১৭ বছর।",
+    "আঠারো বছর বয়সে- কাঁদতে জানে না।",
+    "অনুপমদের টিকিট - ফার্স্ট ক্লাসের।",
+    "অনুপমের কি স্টেশনে পড়িয়া রইল - ক্যামেরা।",
+    "অনুপম পাস করেছে - এমএ।",
+    "ওহে, মেয়ে যদি বল একটি খাসা মেয়ে আছে।-  উক্তিটি হরিশের।",
+    "মন্দ নয় হে। খাঁটি সোনা বটে।- উক্তিটি বিনুদাদার।",
+    "শিগগির চলে আয় এই গাড়িতে জায়গা আছে। উক্তিটি কল্যাণীর - যা অনুপম প্রথম শুনে ট্রেনে।", 
+    "নজরুলের প্রথম প্রকাশিত কবিতার নাম - মুক্তি। প্রকাশিত হয় ১৯১৮ সালে।",
+    "যুগবাণী -  নবযুগ পত্রিকায় প্রকাশিত হয়।",
+    "রক্তাম্বর ধারিণী মা - কবিতাটি কাজী নজরুল ইসলামের রচিত।",
+    "রক্তকরবী - নাটকটি রবীন্দ্রনাথ ঠাকুর রচিত।",
+    "আঠারো বছর বয়স- ভয়ংকর।",
+    "আঠারো বছর বয়স- পথে প্রান্তরে ছোটায় তুফান।",
+    "আঠারো বছর কবিতার লাইন সংখ্যা- ৩২ টি। কবিতাটি মাত্রাবৃত্ত ছন্দে রচিত। প্রতি চরণে মাত্রা সংখ্যা ১৪ (২+৬+৬)।কবিতাটি প্রকাশিত হয়- ১৯৪৮ সালে।",
+    "ঘাসফড়িং-এর দেহ কাইটিন নির্মিত কিউটিকল দিয়ে আবৃত।",
+"ঘাসফড়িং-এর মস্তক ৬টি খণ্ডক নিয়ে গঠিত।",
+"ঘাসফড়িং শ্বাসকার্য সম্পাদনের জন্য ট্রাকিয়া ও এর শাখা-প্রশাখা পরস্পরের সাথে মিলিত হয়ে যে তন্ত্রের সৃষ্টি করে তাকে ট্রাকিয়াল তন্ত্র বলে।",
+"যে প্রক্রিয়ায় কেটে যাওয়া স্থানে বা ক্ষতস্থানের রক্ত জমাট বেঁধে দেহ হতে অবাঞ্ছিত রক্তপাত বন্ধ করে তাকে রক্ততঞ্চন প্রক্রিয়া বলে।",
+"অধিক চর্বিযুক্ত খাবার খেলে লসিকাতে ফ্যাটের পরিমাণ বেড়ে যায় এবং লসিকাকে দুধের মতো সাদা দেখায়। এ ধরনের লসিকাকে কাইল বলে।",
+"মানব ভ্রূণের প্রাথমিক পর্যায়ে কুসুম খলিতে, শেষ পর্যায়ে যকৃতে এবং জন্মের পর থেকে অস্থিমজ্জাতে যে পদ্ধতিতে লোহিত রক্তকণিকা সৃষ্টি হয় তাকে এরিথ্রোপোয়েসিস বলে।",
+"কোনো গ্রহের মুক্তিবেগ ঐ গ্রহের ব্যাসার্ধের ওপর - নির্ভরশীল",
+"একই কক্ষপথে আবর্তনরত দুটি কৃত্রিম উপগ্রহের একটির ভর অপরটির দ্বিগুণ হলে এদের আবর্তনকাল - একই",
+"মহাকর্ষীয় বিভব এবং তড়িৎ কিংবা চৌম্বক বিভব - ভিন্ন",
+"কোনো বিন্দুর মহাকর্ষ বিভব 5 Jkg-1 বলতে বোঝায় যে অসীম দূর হতে উক্ত বিন্দুতে 1 kg ভরের একটি বস্তুকে আনতে মহাকর্ষ বলের দ্বারা সম্পাদিত কাজের পরিমাণ হবে 5 J।",
+"মহাকর্ষ ক্ষেত্রের কোনো বিন্দুর প্রাবল্য 2Nkg-1 বলতে বোঝায় সংশ্লিষ্ট বিন্দুতে 1 kg ভরের বস্তু স্থাপন করলে তা 2 N আকর্ষণ বল অনুভব করবে।",
+"সুষম বৃত্তাকার গোলকের ভারকেন্দ্র এর জ্যামিতিক কেন্দ্রে থাকবে।",
+"যে সকল গ্যাস সকল তাপমাত্রা ও চাপে বয়েল ও চার্লসের সূত্র মেনে চলে, তাদেরকে আদর্শ গ্যাস বলে।",
+"গ্যাসের অণুর গতিতত্ত্ব সুপ্রতিষ্ঠিত করার জন্য কতকগুলো পূর্ব শর্তকে গ্যাসের মৌলিক স্বীকার্য বলে।",
+"বায়বীয় পদার্থের আচরণের নিয়মগুলো পেতে যে তত্ত্ব সৃষ্টি হয়েছে, সেই তত্ত্বই গ্যাসের গতিতত্ত্ব নামে পরিচিত।",
+"গ্যাসের অণুর বেগ শূন্য থেকে শুরু করে অসীম পর্যন্ত বিভিন্ন মানের হয়ে থাকে। এদের বেগের গড় মানকে গড় বেগ বলে।",
+"বিস্তীর্ণ এলাকায় সমবেতভাবে ভাসমান পানি কণাগুলোকে কুয়াশা বলে।",
+"তাপমাত্রা যখন শিশিরাঙ্কের নিচে নেমে আসে তখন বায়ুকে সম্পৃক্ত করতে প্রয়োজনীয় জলীয় বাষ্পের অতিরিক্ত বাষ্প ঘনীভূত হয়ে ক্ষুদ্র ক্ষুদ্র পানি বিন্দুতে পরিণত হয় একে শিশির বলে।",
+"সমুদ্রপৃষ্ঠে 45° অক্ষাংশে 0°C তাপমাত্রায় 760 mm বিশুদ্ধ পারদ স্তম্ভের চাপকে প্রমাণ চাপ বলা হয়।",
+"গ্যাস অণুগুলোর বেগের বর্গের গড়মানের বর্গমূলকে মূল গড় বর্গবেগ বলে।",
+"পরপর দুটি সংঘর্ষের মধ্যবর্তী সময়ে একটি অণু যে গড় দূরত্ব অতিক্রম করে তাই গড় মুক্ত পথ।",
+"কোন স্থানে নির্দিষ্ট আয়তনের বায়ুতে উপস্থিত জলীয় বাষ্পের ভর ও বায়ুর তাপমাত্রায় ঐ আয়তনের বায়ুর সম্পৃক্ত জলীয় বাষ্পের ভরের অনুপাতকে ঐ স্থানের আপেক্ষিক আর্দ্রতা বলে।",
 ];
 
 function typeWriter(text, i, fnCallback) {
