@@ -315,6 +315,42 @@ h2 a{
       opacity: 1;
     }
   }
+    .countdown-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .countdown-item {
+    margin: 10px 0;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .countdown-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .countdown-item {
+      font-size: 18px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -325,7 +361,7 @@ h2 a{
     <span class="close">&times;</span>
 
     <p align="center"> <img src="Ramadan.jpg" height="60%" width="60%"></p>
-<h4 style="color:green">গত ১১ই মার্চ সোমবার পশ্চিমাকাশে উঁকি দিয়েছে নতুন চাঁদ। বছর ঘুরে আবারও এলো রহমত, মাগফেরাত আর নাজাতের সওগাত নিয়ে মাহে রমজান। শুরু হলো সংযম-সাধনা, আত্মশুদ্ধি আর ত্যাগের মাস। খোশ আমদেদ মাহে রমজান।</h4>
+<h4 style="color:green">গতকাল ১১ই মার্চ সোমবার পশ্চিমাকাশে উঁকি দিয়েছে নতুন চাঁদ। বছর ঘুরে আবারও এলো রহমত, মাগফেরাত আর নাজাতের সওগাত নিয়ে মাহে রমজান। শুরু হলো সংযম-সাধনা, আত্মশুদ্ধি আর ত্যাগের মাস। খোশ আমদেদ মাহে রমজান।</h4>
  
  <h4 style="color:brown">রমজানের ফরজ:</h4>
 <p style="color:#34b">রমজান মাসে বিশেষ ফরজ হলো  ১ মাস রোজা পালন করা। <br> রমজানের সঙ্গে যুক্ত ফরজে কিফায়া দুটি, <br> ১.শাবানের চাঁদের হিসাব রাখা। <br> ২.রমজানের তারিখের হিসাব রাখা।</p>
@@ -338,6 +374,7 @@ h2 a{
 
 <div class="container">
   <h1>Dinajpur Govt City College </h1>
+
   <div class="info-icon" onclick="openipopup()">
  <b>• info</b><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path fill="none" d="M0 0h24v24H0V0z"/>
@@ -355,15 +392,26 @@ h2 a{
      <h5>Telegram : <a href="https://t.me/mehedialhasansawon21">Mehedi Al Hasan Sawon </a></h5>
   <h5>Website : <a href="https://sawon21.github.io/mehedialhasansawon21/">Mehedi Al Hasan Sawon </a></h5>
 <br>
-<h3 style="color:pink"> Last Update : 11 March, 2024; 10:00 AM</h3>
+<h3 style="color:pink"> Last Update : 21 March, 2024; 10:00 AM</h3>
   <button onclick="closeipopup()">Close</button>
 </div>
 
   <h2 title="সকল বিষয় এর মার্ক দেখুন "> <a href="Exam Type.html"><pre>☞ View All Subject Result</pre></a> </h2>
-  <marquee> ১১ই মার্চ ২০২৪ ইং তারিখে সর্বশেষ আপডেট করা হয়েছে। ✔ নতুন ফিচার ✪ কয়টি বিষয়ে অকৃতকার্য হয়েছেন।  সেটি জানতে পারবেন ✪  এবং প্রতিবার রিফ্রেস করাতে নতুন নতুন জ্ঞানমূলক প্রশ্ন প্রদর্শন করবে। ✪ আরো কোনো ফিচার উপভোগ করতে চাইলে ফিডব্যাক দিন। ◑ Thank You </marquee>
+  <marquee> ২১শে মার্চ ২০২৪ ইং তারিখে সর্বশেষ আপডেট করা হয়েছে। ✔ নতুন ফিচার ✪ কয়টি বিষয়ে অকৃতকার্য হয়েছেন।  সেটি জানতে পারবেন ✪  এবং প্রতিবার রিফ্রেস করাতে নতুন নতুন জ্ঞানমূলক প্রশ্ন প্রদর্শন করবে। ✪ HSC পরীক্ষার সময় Countdown ✪ আরো কোনো ফিচার উপভোগ করতে চাইলে ফিডব্যাক দিন। ◑ Thank You </marquee>
   <br> <br>
   <div id="quote"></div>
     <h4 align="right" style="color:#800080">Give us your ☞ <a href="feedback.html"><button class="fd">Feedback</button></a></h4>
+      <h2 style="color:red"><i>HSC Exam - 2024</i> <br>(30 June , 2024) </h2>
+<div class="countdown-container">
+  <div class="countdown-label">Days</div>
+  <div class="countdown-item" id="days">00</div>
+  <div class="countdown-label">Hours</div>
+  <div class="countdown-item" id="hours">00</div>
+  <div class="countdown-label">Minutes</div>
+  <div class="countdown-item" id="minutes">00</div>
+  <div class="countdown-label">Seconds</div>
+  <div class="countdown-item" id="seconds">00</div>
+</div>
   <div class="form-group">
     <label for="department">Select Department:</label>
     <select id="department">
@@ -383,7 +431,7 @@ h2 a{
 
   <div class="form-group">
     <label for="roll">Enter Roll Number:</label>
-    <input type="number" id="roll" placeholder="1-387">
+    <input type="number" id="roll" placeholder=" Only [ 1 - 387 ] Roll ">
   </div>
 
   <button class="my-result-btn" onclick="showResult()"><b>My Result</b></button>
@@ -398,6 +446,50 @@ h2 a{
 </div>
 
 <script>
+
+// Set the date we're counting down to
+  var countDownDate = new Date("June 30, 2024 00:00:00").getTime();
+
+  // Update the countdown every 1 second
+  var countdownInterval = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the remaining time
+    var distance = countDownDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    document.getElementById("days").innerHTML = formatTime(days);
+    document.getElementById("hours").innerHTML = formatTime(hours);
+    document.getElementById("minutes").innerHTML = formatTime(minutes);
+    document.getElementById("seconds").innerHTML = formatTime(seconds);
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+    }
+  }, 1000);
+
+  // Function to add leading zeros to numbers
+  function formatTime(time) {
+    return time < 10 ? "0" + time : time;
+  }
+
+
+
+
+
 
 function openipopup() {
     document.getElementById('ipopup').style.display = 'block';
