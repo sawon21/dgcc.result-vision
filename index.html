@@ -179,6 +179,7 @@ h2 {
   background-color: #007bff;
   color: #fff;
   font-weight: bold;
+  font-size: 19px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -186,7 +187,21 @@ h2 {
   font-family: Arial;
   animation: fadeIn 1s ease-in-out;
 }
-
+.position-btn{
+ display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Arial;
+  animation: fadeIn 1s ease-in-out; 
+}
 .my-result-btn:hover {
   background-color: #0056b3;
 }
@@ -351,6 +366,33 @@ h2 a{
       line-height: 40px;
     }
   }
+  /* Styling for the position table */
+#positionTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#positionTable th,
+#positionTable td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#positionTable th {
+  background-color: yellow;
+  color: black;
+}
+
+#positionTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#positionTable tbody tr:hover {
+  background-color: #ddd;
+}
+
 </style>
 </head>
 <body>
@@ -434,7 +476,13 @@ h2 a{
     <input type="number" id="roll" placeholder=" Only [ 1 - 387 ] Roll ">
   </div>
 
-  <button class="my-result-btn" onclick="showResult()"><b>My Result</b></button>
+  <button class="my-result-btn" onclick="showResult()"><b>My Result</b></button> <br>
+  <!-- New button to generate positions in a table -->
+<button class="position-btn" onclick="generatePositionTable()">Generate all students positions</button>
+
+<!-- Stylish table to display roll number, position, and exam type -->
+
+
 
   <div class="result" id="result">
     <p id="departmentResult"></p>
@@ -442,10 +490,49 @@ h2 a{
     <p id="examTypeResult"></p>
     <p id="resultText"></p>
   </div>
+  <table id="positionTable">
+  <thead>
+    <tr>
+      <th>Roll Number</th>
+      <th>Exam Type</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table body will be populated by JavaScript -->
+  </tbody>
+</table>
   <h5 style="color:brown"><pre>© Developed by <a style="color:#27272c" href="https://www.facebook.com/mdmehedialhasansawon?mibextid=ZbWKwL">Mehedi Al Hasan Sawon</pre> </a></h5>
 </div>
 
 <script>
+function generatePositionTable() {
+  var tableBody = document.querySelector('#positionTable tbody');
+  tableBody.innerHTML = '';
+
+  for (var rollNumber in students) {
+    if (students.hasOwnProperty(rollNumber)) {
+      var student = students[rollNumber];
+      
+      for (var examType in student.exams) {
+        if (student.exams.hasOwnProperty(examType)) {
+          var exam = student.exams[examType];
+          var newRow = tableBody.insertRow();
+
+          var rollCell = newRow.insertCell(0);
+          rollCell.textContent = rollNumber;
+
+          var examTypeCell = newRow.insertCell(1);
+          examTypeCell.textContent = examType;
+
+          var positionCell = newRow.insertCell(2);
+          positionCell.textContent = exam.position;
+        }
+      }
+    }
+  }
+}
+
 
 // Set the date we're counting down to
   var countDownDate = new Date("June 30, 2024 00:00:00").getTime();
@@ -566,14 +653,16 @@ displayQuote();
 var students = {
   "1": { department: "Science", 
          exams: {
+       // "Test - 2024": { marks: 985, totalMarks: 900, position: 1 },
+       // "Pre-Test - 2024": { marks: 320, totalMarks: 900, position: 2 },
            "Tutorial - 2024": { marks: 79, totalMarks: 140, position: 2,
          failedSubject:1 }
          }
        },
   "2": { department: "Science", 
          exams: {
-      //   "Test - 2024": { marks: 985, totalMarks: 900, position: 1 },
-     //    "Pre-Test - 2024": { marks: 320, totalMarks: 900, position: 2 },
+     //    "Test - 2024": { marks: 85, totalMarks: 900, position: 1 },
+   //     "Pre-Test - 2024": { marks: 300, totalMarks: 900, position: 2 },
          "Tutorial - 2024": { marks: 73, totalMarks: 140, position: 1 ,
          failedSubject:1}
          }
