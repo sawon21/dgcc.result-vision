@@ -15,16 +15,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        
     }
     .container {
         text-align: center;
     }
     h1 {
-        color: #118DFF;
+        color: brown;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-bottom: 30px;
+        font-size: 25px;
     }
     .countdown-container {
     text-align: center;
@@ -34,9 +35,9 @@
     flex-direction: column;
     animation: fadeIn 1s ease-in-out;
   }
-  
+
   .countdown-item {
-    margin: 10px 0;
+    margin: 4px 0;
     font-size: 24px;
     width: 50px;
     height: 50px;
@@ -47,13 +48,13 @@
     font-weight: bold;
     animation: fadeIn 1s ease-in-out;
   }
-  
+
   .countdown-label {
     font-size: 18px;
     margin-bottom: 5px;
     font-weight: bold;
   }
-  
+
   @media (max-width: 600px) {
     .countdown-item {
       font-size: 18px;
@@ -62,7 +63,11 @@
       line-height: 40px;
     }
   }
-  
+p{
+ font-family: 'AponaLohit', sans-serif; 
+ font-weight: bold;
+ color:violet;
+}
   #quote {
         font-size: 18px;
         font-family: 'AponaLohit', sans-serif;
@@ -71,13 +76,76 @@
         font-style: italic;
         font-weight: bold;
     }
+   a{
+     text-decoration: none;
+   } 
+ .cssbuttons-io-button {
+  background: #118DFF;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 3.2em;
+  font-size: 23px;
+  font-weight: 900;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #118DFF;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #118DFF;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+h3{
+  background-color: yellow;
+  color: blue;
+  font-size: 20px;
+}
 </style>
 </head>
 <body>
 <div class="container">
-   <div id="quote"></div>
+  
     <h1>HSC Exam<br>
 (30 June , 2024)</h1>
+ <div id="quote"></div>
+ <br>
     <div class="countdown-container">
   <div class="countdown-label">Days</div>
   <div class="countdown-item" id="days">00</div>
@@ -87,7 +155,27 @@
   <div class="countdown-item" id="minutes">00</div>
   <div class="countdown-label">Seconds</div>
   <div class="countdown-item" id="seconds">00</div>
-</div>
+</div> <br>
+<p>ঘড়ির কাটা কিন্তু থেমে নেই 😔 <br> এখনই মডেল টেস্ট দেওয়া শুরু করো -</p>
+<h3> HSC Science 2024 Test Paper & Final Model Test <br> CQ & MCQ Unlimited Exam <br> Only 239 tk (1 month) </h3>
+<a href="https://chorcha.net/landing/khela-hobe-24?_promo=dgcc20&affiliate=SU-PpAF-XFtcSqsO "><button class="cssbuttons-io-button">
+  Get started
+  <div class="icon">
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </div>
+</button>
+</a>
 </div>
 
 <script>
@@ -129,7 +217,7 @@
   function formatTime(time) {
     return time < 10 ? "0" + time : time;
   }
-  
+
 const quotes = [
     "ট্রেনে কল্যাণীর সাথে দেখাকালীন অনুপমের বয়স-২৪/২৫ বছর।",
     "ট্রেনে অনুপমের সাথে দেখাকালীন কল্যাণীর বয়স-১৬/১৭ বছর।",
